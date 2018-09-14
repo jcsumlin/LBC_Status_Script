@@ -13,9 +13,9 @@ min_counter = 13
 try:
     myself = lc.getMyself()
     print("\r\nHello, " + myself['data']['username'] + ".\r\n")
-except Exception:
+except Exception as e:
     print(
-        "Error authenticating API KEY + API SECRET, or error parsing data. Please try again.")
+        "Error authenticating API KEY + API SECRET, or error parsing data. Please try again.\n\n {e}".format(e=e))
     exit()
 
 while True:
